@@ -1,6 +1,7 @@
 interface Options {
   prompt: string;
 }
+
 export const ortographyCheckUseCase = async ({
   prompt,
 }: Options): Promise<string> => {
