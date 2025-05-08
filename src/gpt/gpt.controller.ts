@@ -6,8 +6,10 @@ import { GptService } from './gpt.service';
 export class GptController {
   constructor(private readonly gptService: GptService) {}
 
+  // Endpoint para verificar la ortografía
   @Post('orthography-check')
   orthographyCheck(@Body() ortographyDto: OrtographyDto) {
+    // Retorna la respuesta de la verificación ortográfica
     return this.gptService.ortographyCheck(ortographyDto);
   }
 }
